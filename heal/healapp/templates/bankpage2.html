@@ -1,0 +1,51 @@
+<html>
+        <script>
+                function printalert(form){
+                    debugger;
+                    
+                        alert(" Succesfully Added")
+            
+                }
+            
+               </script>
+
+<div style="width:100%;margin:(0px,0px);padding:0px; height:875px;background: #fff;">
+        <font color="white">...................................................................................................................................................................................................................................V.........</font><a href="staffpage"><img src="static/img/backgif.gif" width="40px" height="40px" alt="" class="img-responsive logo"></a><font color="white">...</font>BACK TO PROFILE
+            
+    <br><br><center> <H1 style="color:black;"><font size="05"> BILL PAYMENT CONFIRMATION</font></style></H1></center>
+                
+    <form  method="POST" onsubmit="return printalert(this)"  enctype="multipart/form-data"  style="width:100%;padding:5px;">		
+    {% csrf_token %}
+     
+    <center>
+              
+    <table style="width:750px" cellspacing="15">       
+    
+    
+    
+    <img src="static/img/feed2.png" width="50px" height="50px">
+    <tr>
+       
+           
+    <tr>
+    <td><b>USER NAME</td>
+    <td><input type="text" name="uname" value="{{uname}}" required=""></td><br>
+    
+    
+    </tr>
+    
+    <tr>
+        <td><b>STATUS</td>
+        <td><input type="text" name="staa" value="{{new}}" required=""></td><br>
+        
+        
+        </tr>
+    
+   
+    <tr>
+        <td><td><input type="submit" value="submit"></td></td>
+    </tr>
+</table>
+</html>
+    
+    

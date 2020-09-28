@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search For Medical Details</title>
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+<!-- CSS styles for standard search box -->
+<style type="text/css">
+	#tfheader{
+		background-color:black;
+	}
+	#tfnewsearch{
+		float:right;
+		padding:20px;
+	}
+	.tftextinput{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton {
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #0095cd;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+</style>
+</head>
+<body>
+	
+	<!-- HTML for SEARCH BAR -->
+	<div id="tfheader">
+		<table><tr><td>
+			<font color="black">..</font><a href="source.html"><img src="static/img/mainlogo.png" width="70px" height="70px"  alt="" class="img-responsive logo"><br><img src="static/img/logo etstt.png" width="90px" height="40px"  alt="" class="img-responsive logo"></a>
+		</td><td><form id="tfnewsearch" method="POST" action="">
+			
+				<font color="white"><font color="black">......................................................................................................................................</font>Search for Patient Medical Details
+			{% csrf_token %}
+		     <font color="black">..</font>  <input type="submit" value="search" class="tfbutton">
+	
+			</form></td></tr></table>
+	<div class="tfclear"></div>
+	</div><br><br>
+	<table cellpadding="10" border=3 class="TFtable">
+		<tr>
+					<th>FIRST NAME </th> <th>SECONDNAME </th><th>USER NAME</th><th>ADDRESS</th><th>COUNTRY</th><th>CONTACT NO</th><th>DOB </th><th>GENDER</th><th>BLOOD GROUP	</th><th>RELATIVES NAME</th><th>RELATIVES PHNO</th><th>uid no</th>
+		</tr>
+		
+		<tr>
+		{% for d in data %}
+		<for><td>{{d.0}}</td><td>{{d.1}}</td><td>{{d.2}}</td><td>{{d.4}}</td><td>{{d.5}}</td><td>{{d.7}}</td><td>{{d.8}}</td><td>{{d.9}}</td><td>{{d.10}}</td><td>{{d.11}}</td><td>{{d.12}}</td><td>{{d.13}}</td></for>
+		</tr>
+		{% endfor %}
+	   
+	</table>
+	<br>
+	<table cellpadding="10" border=3 class="TFtable">
+			<tr>
+				<th>USERID </th><th>USER NAME </th> <th>DOCTOR NAME </th><th>HOSPITAL NAME</th><th>FILE TYPE</th><th>FILES</th><th>COMMENTS</th>
+			</tr>
+			
+			<tr>
+			{% for d in da %}
+			<for><td>{{d.0}}</td><td>{{d.1}}</td><td>{{d.2}}</td><td>{{d.3}}</td><td>{{d.4}}</td><td><a href="\static\media\{{d.5}}">{{d.5}}</a></td><td>{{d.6}}</td></for>
+			</tr>
+			{% endfor %}
+		
+			
+		</table>
+		<br>
+		<div class="wrapper" style="background-color: #fff;">
+				<br><br>
+		<table>
+	<div class="wrapper" style="background-color: #fff;">
+			<br><br>
+	<table>
+	<tr><td><font color="white">..............................................................................................................</font><a href="doctorpage"><img src="static/img/backgif.gif" width="40px" height="40px" alt="" class="img-responsive logo"></a><font color="white">...</font>BACK TO PROFILE<font color="white">.......................................................................................</font></td></tr>
+	
+	</table>
+</body>
+</html>
+

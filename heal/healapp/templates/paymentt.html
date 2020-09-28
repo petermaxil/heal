@@ -1,0 +1,93 @@
+<html>
+    <script>
+        function printalert(form){
+            debugger;
+            
+                alert("processing........!")
+    
+        }
+    
+       </script>
+
+
+<div style="width:100%;margin:(0px,0px);padding:0px; height:300px;background-image: url(\\static\\img\\sbi4.png);background-repeat:no-repeat;">
+            
+  <br><br><center> <H1 style="color:black;"><font size="05">ONLINE PAYMENT</font></style></H1></center>
+              
+  <form  method="POST" enctype="multipart/form-data"  style="width:100%;padding:5px;">		
+  {% csrf_token %}
+   
+  <center>
+            
+  <table style="width:750px" background-image=" url(\\static\\img\\sbi3.jpg);background-repeat:no-repeat" cellspacing="15">       
+  
+  
+  
+  <img src="static/img/feed2.png" width="50px" height="50px">
+  <tr><td><b><font size="05">Add a card</font></td></tr>
+  <tr><td>We Accept Credit and Debit Cards from Visa,Mastercard,Rupay & Maestro.</td></tr>
+  
+<tr>
+  {% for d in data %}<td><b>paying:</td>
+  <td><input type="text" name="amount" value="{{d.7}}"></td>{% endfor %}<br>
+          
+  <tr>
+  <td><b>card number:</td>
+  <td><input type="text" name="cname" value="{{uname}}"></td><br>
+  
+  
+  </tr>
+  <tr>
+      <td><b>card holder</td>
+      <td><input type="text" name="chold" value="{{uname}}"></td><br>
+      
+      
+      </tr>
+  
+  <tr>
+    <td><b>Expiry month:</td>
+        <td><select name="Month">
+          <option value="january">January</option>
+          <option value="february">February</option>
+          <option value="march">March</option>
+          <option value="april">April</option>
+          <option value="may">May</option>
+          <option value="june">June</option>
+          <option value="july">July</option>
+          <option value="august">August</option>
+          <option value="september">September</option>
+          <option value="october">October</option>
+          <option value="november">November</option>
+          <option value="december">December</option>
+        </select>
+        </td>
+        </tr>
+      <tr><td><b>Expiry Year:</td>
+        <td><select name="Year">
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+        </select>
+        </td>
+    </tr>
+      <tr>
+          <td><b>cvv </td>
+           <td><input type="text" name="cvv"></td>
+        <tr><td>Your Card data is saved in a PCI DSS complaint secure vault</td></tr> 
+        <tr><td><img src="static/img/visa.png" height="50px" width="50px"><img src="static/img/master1.png" height="50px" width="30px"><img src="static/img/pci1.png" height="50px" width="30px"></td></tr>  
+           
+           
+  
+  <tr>
+      <td><td><input type="submit" onclick="return printalert(this)" value="Pay"></center></td></td>
+  </tr>
+</table>
+      
+  </form>
+  </html>

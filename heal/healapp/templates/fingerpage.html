@@ -1,0 +1,38 @@
+<h1>Add a Fingerprint</h1>
+
+
+  
+    <div class="container">
+      
+      <p>Please fill and click the below button to add a fingerprint.</p>
+
+<div  style="width:100%;margin:(0px,0px);padding:0px; height:500px;background-color: grey;"><br>
+
+        <table cellpadding="10" border=3 class="TFtable">
+                <tr>
+                            <th>YOUR USER ID </th> 
+                </tr>
+                
+                <tr>
+                {% for d in data %}
+                <for><td>{{d.13}}</td><td>{{d.2}}</td></for>
+                </tr>
+                {% endfor %}
+               
+            </table>
+
+<form method="POST">
+    {% csrf_token %}
+    <center>
+<table cellpadding="20">   
+    
+    <br><br>   
+    
+       <tr><td>USER NAME          :</td><td><input id="finame" type="text" name="uname" placeholder="ENTER USENAME"  required=""></td></tr>
+
+</table>
+<font color="grey">......</font><img src="static/img/fin.gif" width="80" height="50"><font color="grey">......</font><input type="submit"   name="FINGER_ACCESS" value="FINGER ACCESS" >
+
+</center> 
+</form>
+</div>

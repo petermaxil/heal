@@ -1,0 +1,55 @@
+<html>
+
+<body>
+
+<div class="wrapper" style="background-image: url(\\static\\img\\de1.jpg);">
+      <br><br>
+    <center> <H1 style="color:black;">BOOKING DETAILS</style></H1></center>
+    
+    <center>
+      
+       <style type="text/css">
+        .TFtable{
+                width:100%; 
+                 
+        }
+        .TFtable td{ 
+                padding:1px; border:black 1px solid;
+        }
+        .TFtable th{ 
+                padding:5px; border:black 1px solid;
+                background:white;
+        }
+        /* provide some minimal visual accomodation for IE8 and below */
+        .TFtable tr{
+                background: white;
+        }   
+        .TFtable th{ 
+                padding:7px; border:black 1px solid;
+                background:white;
+        }
+        /*  Define the background color for all the EVEN background rows  */
+        .TFtable tr:nth-child(even){
+                background: #dae5f4;
+        }
+</style>
+   <br><br>  
+
+<table cellpadding="10" border=3 class="TFtable">
+    <tr>
+                 <th>DOCTOR NAME </th><th>HOSPITAL NAME</th><th>location</th><th>departments</th><th>username</th><th>Booking Date</th><th>condition</th><th>Time</th><th>status</th>
+    </tr>
+    
+    <tr>
+    {% for e in data %}
+    <for><td>{{e.1}}</td><td>{{e.2}}</td><td>{{e.3}}</td><td>{{e.0}}</td><td>{{e.4}}</a></td><td>{{e.6}}</td><td>{{e.8}}</td><td>{{e.9}}</td><td>{{e.10}}</td></for>
+    </tr>
+    {% endfor %}
+  
+</table>
+<br>
+<div class="wrapper" style="background-color: #fff;">
+        <br><br>
+        <table>
+      <tr><td><font color="white">.......................................................................</font><a href="profilee"><img src="static/img/backgif.gif" width="30px" height="30px" alt="" class="img-responsive logo"></a><font color="white">..</font>BACK TO PROFILE</td></tr></td></tr>          
+</table>

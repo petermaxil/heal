@@ -1,0 +1,202 @@
+<html>
+    <head>
+        <script>
+            function printalert(form){
+                debugger;
+                
+                    alert("Profile Registered Succesfully")
+        
+            }
+        
+           </script>
+        <style>
+        footer
+{
+    background-color:black;
+   
+}
+
+* {
+  box-sizing: border-box;
+}
+        </style>
+    </head>
+
+<h1>Doctor Registration Page<font color="white">...................................................................................</font><a href="source"><img src="static/img/backgif.gif" width="30"height="30" ><font size="03">BACK TO HOME</font></a></h1></h1>
+
+
+  
+    <div class="container">
+      
+      <p>Please fill in this form to create an account.</p>
+      
+    <body>
+   
+   
+      <div style="width: 100%;height: 1050px;background-color: white">
+      
+         <center>
+         
+             <br>  <div style="width: 95%;height:960px;background-color: rgba(9, 0, 128, 0.432)">
+             
+             <center>
+                 <br>  <div style="width: 80%;height:925px;background-color: white">
+                 
+                 <br>        
+             <td></td><td><br><img src="static/img/images.png" alt="sign up" width="150" height="150" border="0">
+       
+     <form method="POST" onsubmit="return printalert(this)">
+     {% csrf_token %}
+     <table cellpadding="20">   
+      
+   <br><br>   
+   
+      <tr><td>DOCTOR NAME          :</td><td><input id="finame" type="text" name="dname" value="" required/></td></tr>
+      <tr><td>DEPARTMENT          :</td><td><input id="sename" type="text" name="cname" value="" required/></td></tr>
+      <tr><td>HOSPITAL NAME          :</td><td><input id="uename" type="text" name="hname" value="" required/></td></tr>
+      <tr><td>PASSWORD      :</td><td><input id="pswd" type="password" name="dpword" value="" required/><img src="static/img/eye.png" height="20" width="20" onclick="myFunction()"></td></tr> 
+      <tr><td>CONFIRM PASSWORD      :</td><td><input id="psd" type="password" name="cdpword" value="" required/></td></tr> 
+     
+      <tr><td>CONTACT NO    :</td><td><input id="phnu" type="number" name="phno" value="" required/></td></tr>
+      <tr><td>EMAIL ID      :</td><td><input id="e-mail" type="email" name="email" value="" required/></td></tr>
+   
+      
+      
+      <tr><td>GENDER        : </td><td>male<input id="male" type="radio" name="gender" value="male" required/>female<input id="female" type="radio" name="gender" value="female" required=""/></td></tr>
+      
+      
+          </div>
+    
+          </table><br>
+          <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+          <input type="submit"   name="sub"   value="SUBMIT">  <input type="reset" value="RESET">
+          <p>Already have an account? <a href="docsignin" style="color:black">SIGNIN</style></a></p>
+          <script>
+            function myFunction() {
+              var x = document.getElementById("pswd");
+              if (x.type === "password") {
+                x.type = "text";
+              } else {
+                x.type = "password";
+              }
+            }
+            </script>         
+      </form>
+          
+        
+         
+                 </div>
+              </center>
+            </div>
+           </center>
+  </div>
+            
+  
+  <footer >
+  
+
+    <div class="container">
+      <div class="row">
+      <table><tr><td>
+        <div class="col-xs-6 footer-para">
+          <p><font color="white">&copy;DEEKZ  All right reserved</font><font color="black">...............................................................................................................................................................</font></p>
+          </div></td>
+          <td>
+        
+          
+          
+          <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+        
+      </td>
+      <td>
+        
+          
+          
+      <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+    
+  </td>
+  <td>
+        
+          
+          
+  <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+
+</td>
+<td>
+        
+          
+          
+  <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+
+</td>
+      <td>
+        
+          
+          
+      <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+    
+  </td>
+  <td>
+        
+          
+          
+  <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+
+</td>
+        <td>
+      
+        
+        <a href="source"><img src="static/img/fb.png" width="40px" height="40px"  alt="" class="img-responsive logo"></a>
+      
+      </td>
+      <td>
+        
+          
+          
+        <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+      
+    </td>
+    
+      <td>
+        
+          
+          
+            <img src="static/img/twi.png" width="30px" height="30px"  alt="" class="img-responsive logo">
+          
+      </td>
+      <td>
+        
+          
+          
+        <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+      
+    </td>
+      <td>
+        
+        
+          
+          <a href="docpro"><img src="static/img/insta.png" width="30px" height="30px"  alt="" class="img-responsive logo"></a>
+        
+      </td>
+      </tr>
+      <tr><font color="black">..........</font></tr>
+      <tr><font color="black">..........</font></tr>
+      <tr><font color="black">..........</font></tr>
+      <tr><font color="black">..........</font></tr>
+      <tr><font color="black">..........</font></tr>
+      <tr><font color="black">..........</font></tr>
+      <tr><font color="black">..........</font></tr>
+      <tr><font color="black">..........</font></tr>
+      <tr><font color="black">..........</font></tr>
+  
+      </table>
+      </div>
+      </div>
+          
+      
+    </footer>
+  </body>
+
+
+
+  

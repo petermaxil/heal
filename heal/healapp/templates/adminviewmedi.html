@@ -1,0 +1,58 @@
+
+<html>
+
+    <body>
+    
+    <div class="wrapper" style="background-image: url(\\static\\img\\de1.jpg);">
+          <br><br>
+        <center> <H1 style="color:white;">MEDI DETAILS</style></H1></center>
+        
+        <center>
+          
+           <style type="text/css">
+            .TFtable{
+                    width:100%; 
+                     
+            }
+            .TFtable td{ 
+                    padding:1px; border:black 1px solid;
+            }
+            .TFtable th{ 
+                    padding:5px; border:black 1px solid;
+                    background:white;
+            }
+            /* provide some minimal visual accomodation for IE8 and below */
+            .TFtable tr{
+                    background: white;
+            }   
+            .TFtable th{ 
+                    padding:7px; border:black 1px solid;
+                    background:white;
+            }
+            /*  Define the background color for all the EVEN background rows  */
+            .TFtable tr:nth-child(even){
+                    background: #dae5f4;
+            }
+    </style>
+       <br><br>  
+    
+    <table cellpadding="10" border=3 class="TFtable">
+        <tr>
+                    <th>USER NAME </th>  <th>ADDRESS </th><th>COUNTRY</th><th>PINCODE</th><th>CONTACT</th><th>MEDICINES</th><th>Prescription </th><th>TOTAL</th>
+        </tr>
+        
+        <tr>
+        {% for d in data %}
+        <for><td>{{d.1}}</td><td>{{d.5}}</td><td>{{d.7}}</td><td>{{d.6}}</td><td>{{d.8}}</td><td>{{d.2}}</td><td><a href="\static\media\{{d.4}}">{{d.4}}</a></td><td>{{d.3}}</td></for>
+        </tr>
+        {% endfor %}
+       
+    </table>
+    <br>
+    <div class="wrapper" style="background-color: #fff;">
+            <br><br>
+    <table>
+    <tr><td><font color="white">........................................................................................................</font><a href="tabtopat"><img src="static/img/cart2.gif" width="200px" height="200px" alt="" class="img-responsive logo"></a><font color="white">...</font><b> <br><font color="white">...............................................................................................</font><a href="tabtopat"><font color="red">SEND ARRIVING DATE TO PATIENT</b></font></a><font color="white">.......................................................................................</font></td></tr>
+    
+    </table>
+    

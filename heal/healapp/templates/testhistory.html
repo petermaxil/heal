@@ -1,0 +1,56 @@
+
+<html>
+
+    <body>
+    
+    <div class="wrapper" style="background-image: url(\\static\\img\\de1.jpg);">
+          <br><br>
+        <center> <H1 style="color:black;">MEDI DETAILS</style></H1></center>
+        
+        <center>
+          
+           <style type="text/css">
+            .TFtable{
+                    width:100%; 
+                     
+            }
+            .TFtable td{ 
+                    padding:1px; border:black 1px solid;
+            }
+            .TFtable th{ 
+                    padding:5px; border:black 1px solid;
+                    background:white;
+            }
+            /* provide some minimal visual accomodation for IE8 and below */
+            .TFtable tr{
+                    background: white;
+            }   
+            .TFtable th{ 
+                    padding:7px; border:black 1px solid;
+                    background:white;
+            }
+            /*  Define the background color for all the EVEN background rows  */
+            .TFtable tr:nth-child(even){
+                    background: #dae5f4;
+            }
+    </style>
+       <br><br>  
+    
+    <table cellpadding="10" border=3 class="TFtable">
+        <tr>
+                    <th>USER NAME </th> <th>DOCTOR NAME </th><th>HOSPITAL NAME</th><th>TYPE OF TEST</th><th>FILE TYPE</th><th>FILES</th><th>COMMENTS</th>
+        </tr>
+        
+        <tr>
+        {% for d in data %}
+        <for><td>{{d.0}}</td><td>{{d.1}}</td><td>{{d.2}}</td><td>{{d.3}}</td><td>{{d.4}}</td><td><a href="\static\media\{{d.4}}">{{d.5}}</a></td><td>{{d.6}}</td></for>
+        </tr>
+        {% endfor %}
+       
+    </table>
+    <br>
+    <div class="wrapper" style="background-color: #fff;">
+            <br><br>
+    <table>
+    <tr><td><font color="white">..............................................................................................................</font><a href="profilee"><img src="static/img/backk.png" width="30px" height="30px" alt="" class="img-responsive logo"></a><font color="white">...</font>BACK TO PROFILE<font color="white">.......................................................................................</font></td></tr>
+    </table>

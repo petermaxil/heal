@@ -1,0 +1,345 @@
+<html>
+  <head>
+            
+  
+    <style>
+     
+    footer
+{
+background-color:black;
+
+}
+
+* {
+box-sizing: border-box;
+}
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    </style>
+    
+    <meta charset="utf-8">         
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default" style="background-color: black;">
+
+        
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    <a href="index.html"><img src="static/img/mainlogo.png" width="90px" height="100px"  alt="" class="img-responsive logo"><img src="static/img/logo etstt.png" width="90px" height="40px"  alt="" class="img-responsive logo"></a>
+    
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right hidden-md hidden-sm hidden-xs">
+                       <br>
+                    <ul class="nav navbar-nav navbar-right menu-top">
+
+                        <li><a href="hospitalpage"><H4 style="color:white;"><font size="03">HOME</font></style></H4></a></li>
+
+                        <li><a href="staffreg"><H4 style="color:white;"><font size="03">STAFF REGISTRAION</font></style></H4></a></li>
+
+                        <li><a href="staffsignin"><H4 style="color:white;"><font size="03">STAFF LOGIN</font></style></H4></a></li>
+
+                        <br><li><a href="source"><H4 style="color:red;"><font size="02"><font color="black">..................................................................................................</font>SIGN OUT</font></style></H4></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+        <body>
+                <center>    
+                        <div style="width: 100%;height:60px;background-color: white;float: left;">
+                        </div>
+                        
+                        </center>
+                        
+            
+                        </div><br><br>
+    </body>
+                               
+    <div style="width: 100%;height: 670px;background-color:black">
+           
+        <center>
+   <br><div style="width: 95%;height: 660px;background-color: black">
+    <center>    
+       <div style="width: 30%;height:660px;background-color: white;float: left;">
+              
+               <center> 
+               <table> 
+             
+<br>
+<tr>
+ <td><b> SETTINGS</b><br/><a href="staffedit" >        
+       
+       <img src="static/img/mypro.png" alt="" width="100" height="100" border="0"></a></td>
+</tr>
+<br>
+<td><b> billing upload</b><br/><a href="billingst" >        
+       
+ <img src="static/img/bu1.gif" alt="" width="100" height="100" border="0"></a></td>
+</tr>
+<br>
+
+<tr>
+   
+     <td><b>Testing upload</b><br/><a href="testupload" >
+   
+         <img src="static/img/test.jpeg" alt="" width="100" height="100" border="0"></a></td>
+         
+</tr><br>
+<tr>
+        
+        <td><b>bill status</b><br/><a href="billsta" >
+      
+            <img src="static/img/paysta.png" alt="" width="100" height="100" border="0"></a></td>
+            
+  </tr><br>
+
+
+
+
+
+
+
+
+
+               
+</table>
+    
+</center>             
+           
+           </div>
+             
+                <div style="width:100%;margin:(0px,0px);padding:0px; height:660px;background-image: url(\\static\\img\\ddd.jpg);background-repeat:no-repeat;background-position:center;background-size:cover;">
+                
+                     <center>
+                    
+                       <br><br><br>
+                      
+                       
+                        <img class="img-responsive" src="static/img/set.gif " width="100px" height="120px">
+                        <h1 ><font size="03"><font color="black"><b> UPDATE YOUR PROFILE</h1><center><br>
+                        
+                    
+                        
+                          <form method=GET enctype="multipart/form-data"  style="width:100%;padding:5px;">
+                            {% for d in data %}
+                             <center>
+                             <table style="width:750px" cellspacing="20">
+                               
+                             <tr>
+                             <td><font color="black"><b>STAFF NAME      :</b></font></td>
+                             <td><input type="text" name="addstaffs" value="{{d.0}}" readonly></td>
+                             <td><a href='editsttna?addstaffs={{d.0}}&sid={{d.3}}'><img src="/static/img/updd.gif" width="40px" height="40px"></a></td>
+                             </tr>
+                            
+                             
+                             <td><font color="black"><b>PASSWORD      :</b></font></td>
+                             <td><input type="text" name="password" value="{{d.2}}" readonly></td>
+                             <td><a href='editsttp?password={{d.2}}&sid={{d.3}}'><img src="/static/img/updd.gif" width="40px" height="40px"></a></td>
+                             </tr>
+                             
+                             </table>
+                            </center>
+                            {% endfor %}
+                            </form>
+                             
+                          </div>
+                
+                
+                           
+                       
+                    
+                       <br><br>
+                        
+                      
+                    
+                    </center>
+                </div>
+        
+         </center>
+        </div>
+             </center> 
+         </div>
+         <br><br><br>
+         <footer >
+               
+      
+  
+          <div class="container">
+            <div class="row">
+            <table><tr><td>
+              <div class="col-xs-6 footer-para">
+                <p><font color="white">&copy;DEEKZ  All right reserved</font><font color="black">...............................................</font></p>
+                </div></td>
+                <td>
+              
+                
+                
+                <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+              
+            </td>
+            
+         
+            
+              <td>
+              
+                
+                
+                  <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+                
+                </td>
+               
+                      <td><center>
+                          <section  id="contactus">
+                        <div class="main">
+                          <h3></h3>
+                              Heal on You
+                                   
+                              
+                              
+                              <br><br>        Opp. Kadavanthra GCDA,
+                               <br><br>               S. A. Road, Kochi - 20.
+                              
+                                  
+                              
+                                  Phone : 0484 4073473
+                              
+                                   </a>
+                          
+                      
+                          </center></td>
+                          <td>
+              
+                
+                
+                              <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+                            
+                          </td>
+                          <td>
+                                
+                                  
+                                  
+                          <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+                        
+                        </td>
+                        <td>
+                                
+                                  
+                                  
+                          <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+                        
+                        </td>
+                          <td>
+              
+                
+                
+                              <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+                            
+                          </td>
+                          <td>
+                                
+                                  
+                                  
+                          <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+                        
+                        </td>
+                        <td>
+                                
+                                  
+                                  
+                          <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+                        
+                        </td>
+                        <td>
+              
+                
+                
+                            <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+                          
+                        </td>
+                        <td>
+                              
+                                
+                                
+                        <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+                      
+                      </td>
+                      <td>
+                              
+                                
+                                
+                        <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+                      
+                      </td>
+              <td>
+            
+              
+              <a href="source"><img src="static/img/fb.png" width="30px" height="30px"  alt="" class="img-responsive logo"></a>
+            
+            </td>
+            <td>
+              
+                
+                
+              <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+            
+          </td>
+          
+            <td>
+              
+                
+                
+                  <img src="static/img/twi.png" width="30px" height="30px"  alt="" class="img-responsive logo">
+                
+            </td>
+            <td>
+              
+                
+                
+              <img src="static/img/black.webp" width="30px" height="30px"  alt="" class="img-responsive logo">
+            
+          </td>
+            <td>
+              
+              
+                
+                <a href="docpro"><img src="static/img/insta.png" width="30px" height="30px"  alt="" class="img-responsive logo"></a>
+              
+            </td>
+            </tr>
+            <tr><font color="black">..........</font></tr>
+            <tr><font color="black">..........</font></tr>
+            <tr><font color="black">..........</font></tr>
+            <tr><font color="black">..........</font></tr>
+            <tr><font color="black">..........</font></tr>
+            <tr><font color="black">..........</font></tr>
+            <tr><font color="black">..........</font></tr>
+            <tr><font color="black">..........</font></tr>
+            <tr><font color="black">..........</font></tr>
+        
+            </table>
+            </div>
+            </div>
+                
+            
+          </footer>
+      
+         </body>
+         </html>
